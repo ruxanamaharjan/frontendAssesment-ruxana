@@ -1,6 +1,8 @@
 import React from "react";
 import ListComponent from "./ListComponent";
+import { Question1Wrapper } from "./Question1.style";
 
+interface Props {}
 const data = [
 	{
 		name: "Ruxana",
@@ -18,15 +20,15 @@ const data = [
 		phoneNumber: "9810000000",
 	},
 ];
-const MainView = () => {
+const Question1View: React.FC<Props> = () => {
 	return (
-		<div>
+		<Question1Wrapper>
 			<div>Displaying Name, Email, Phone Number using Reusable Component.</div>
-			<div>
+			<section>
 				<ListComponent data={data} />
-			</div>
-		</div>
+			</section>
+		</Question1Wrapper>
 	);
 };
 
-export default MainView;
+export default Question1View;
